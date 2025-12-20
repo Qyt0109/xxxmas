@@ -576,7 +576,9 @@
           titleMesh.visible = false;
           starMesh.visible = false;
           loveMesh.visible = false;
-          const baseAngle = groupGold.rotation.y;
+
+          // Continuous orbit rotation based on time (not hand position)
+          const orbitRotation = time * 0.5; // adjust speed:  increase/decrease multiplier
 
           const total = Math.max(1, photoMeshes.length);
           const angleStep = (Math.PI * 2) / total;
@@ -586,8 +588,8 @@
           photoMeshes.forEach((mesh, i) => {
             mesh.visible = true;
 
-            // Smooth orbit animation
-            const angle = baseAngle + i * angleStep;
+            // Smooth orbit animation with time-based rotation
+            const angle = orbitRotation + i * angleStep;
             const x = Math.sin(angle) * CONFIG.photoOrbitRadius;
             const z = Math.cos(angle) * CONFIG.photoOrbitRadius;
             const y = Math.sin(time + i) * 3;
@@ -595,7 +597,7 @@
             mesh.position.lerp(new THREE.Vector3(x, y, z), 0.1);
             mesh.lookAt(camera.position);
 
-            // Keep uniform scale, no depth-based scaling
+            // Keep uniform scale
             mesh.scale.lerp(new THREE.Vector3(1, 1, 1), 0.1);
 
             // Track which photo is closest (for selection purposes)
