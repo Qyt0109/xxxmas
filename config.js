@@ -1,12 +1,12 @@
 const CHANGE = {
     siteTitle: "Merry XMAS - Quyet Dao",
     startButtonText: "START MAGIC 🎄",
-    loveText: "DAO QUYET DEP TRAI ❤️",
+    loveText: "I LOVE BICH PHUONG ❤️",
 
     photoFiles: [
-        "./image.png",
-        "./image1.jpeg",
-        "./image2.jpeg",
-        "./image3.jpeg",
+        "./IMG_9056.jpeg",
+        "./IMG_9057.jpeg",
+        "./IMG_9058.jpeg",
+        "./IMG_9060.jpeg",
     ]
 };
