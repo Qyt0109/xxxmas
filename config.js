@@ -7,6 +7,6 @@ const CHANGE = {
         "./IMG_9056.jpeg",
         "./IMG_9057.jpeg",
         "./IMG_9058.jpeg",
-        "./IMG_9060.jpeg",
+        "./IMG_9060.jpeg"
     ]
 };
