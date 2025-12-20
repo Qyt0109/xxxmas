@@ -348,7 +348,8 @@
         const borderGeo = new THREE.PlaneGeometry(9, 9);
         const borderMat = new THREE.MeshBasicMaterial({ color: 0xffd700 });
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < photoTextures.length; i++) {
+          if (!photoTextures[i]) continue; // skip missing textures
           const mat = new THREE.MeshBasicMaterial({
             map: photoTextures[i],
             side: THREE.DoubleSide,

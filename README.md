@@ -28,6 +28,9 @@ Demo: https://qyt0109.github.io/xxxmas/
 
 ### B4: Thay đổi text, hình ảnh của trang web
 
+![alt text](doc/img/111.png)
+
+
 Thêm ảnh vào project
 
 ![alt text](doc/img/9.png)
